@@ -8,11 +8,11 @@
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
-				<a href="https://www.google.com/">google |</a>
-				<a href="https://www.facebook.com/sm.tusher.avoid/">facebook |</a>
-				<a href="https://twitter.com/?lang=en">twitter |</a>
-				<a href="https://www.yahoo.com/">yahoo |</a>
-				<a href="https://www.linkedin.com/in/s-m-tusher-mustakim-20522718b/">linkdin</a>
+				<a href="https://www.google.com/" target="_blank">google |</a>
+				<a href="https://www.facebook.com/sm.tusher.avoid/" target="_blank">facebook |</a>
+				<a href="https://twitter.com/?lang=en" target="_blank">twitter |</a>
+				<a href="https://www.yahoo.com/" target="_blank">yahoo |</a>
+				<a href="https://www.linkedin.com/in/s-m-tusher-mustakim-20522718b/" target="_blank">linkdin</a>
 
 			</td>
 			<td width="80%" colspan="2">
@@ -59,7 +59,7 @@
 				<img src="Home2.jpg" height="200" width="295">
 				<img src="Home3.jpg" height="200" width="295">
 				<img src="Home4.jpg" height="200" width="295">
-				<marquee direction="right" behavior="alternate" >
+				<marquee direction="right" behavior="alternate" bgcolor="#d1820a">
         			**This site has been developed by S M TUSHER MUSTAKIM as WebTech project**
     			</marquee>
 			</td>
