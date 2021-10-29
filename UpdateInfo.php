@@ -26,19 +26,38 @@
 			<td  rowspan="3">
 				<h3>
 				<a href="Profile.php">Profile</a><br>
-				<a href="OrderList.php">Order List</a><br>
-				<a href="Transaction.php">Transaction</a><br>
-				<a href="Contact.php">Contact</a><br>
 				<a href="CustomerInfo.php">Customer Information</a><br>
-				<a href="Sellers.php">Sellers</a><br>
+				<a href="Sellers.php">Seller's Information</a><br>
+				<a href="Contact.php">Contact</a><br>
+				<a href="OrderList.php">Order List</a><br>
+				<a href="ListedItems.php">Listed Items</a><br>
+				<a href="Transaction.php">Transaction</a><br>
 				<a href="ManageOrder.php">Manage Order</a><br>
 				<a href="PaymentInfo.php">Payment Info</a><br>
 				<a href="Report.php">Send Report</a><br>
-				<a href="ListedItems.php">Listed Items</a><br>
 				<a href="History.php">History</a><br>
 				<a href="UpdateInfo.php">Information</a><br>
 				<a href="News.php">News</a>
 			</h3>
+			</td>
+			<td>
+				<h2 align="left">
+				<?php
+					$file = fopen("InformationUpdate.txt","r");
+
+					while(! feof($file))
+  					{
+  					echo fgets($file). "<br />";
+  					}
+
+ 					fclose($file);
+					?>
+
+				</h2>
+				<img src="Asset/Info1.jpg" height="300px" width="550px">
+				<img src="Asset/Info2.jpg" height="300px" width="550px">
+				<img src="Asset/Info3.png" height="300px" width="550px">
+				<img src="Asset/Info4.jpg" height="300px" width="550px">
 			</td>
 		</tr>
 	</table>

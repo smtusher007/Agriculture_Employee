@@ -26,19 +26,142 @@
 			<td  rowspan="3">
 				<h3>
 				<a href="Profile.php">Profile</a><br>
-				<a href="OrderList.php">Order List</a><br>
-				<a href="Transaction.php">Transaction</a><br>
-				<a href="Contact.php">Contact</a><br>
 				<a href="CustomerInfo.php">Customer Information</a><br>
-				<a href="Sellers.php">Sellers</a><br>
+				<a href="Sellers.php">Seller's Information</a><br>
+				<a href="Contact.php">Contact</a><br>
+				<a href="OrderList.php">Order List</a><br>
+				<a href="ListedItems.php">Listed Items</a><br>
+				<a href="Transaction.php">Transaction</a><br>
 				<a href="ManageOrder.php">Manage Order</a><br>
 				<a href="PaymentInfo.php">Payment Info</a><br>
 				<a href="Report.php">Send Report</a><br>
-				<a href="ListedItems.php">Listed Items</a><br>
 				<a href="History.php">History</a><br>
 				<a href="UpdateInfo.php">Information</a><br>
 				<a href="News.php">News</a>
 			</h3>
+			</td>
+			<td>
+				<table border="1" align="center" width="80%" height="300px">
+					<tr>
+						<td>
+							<h3 align="center">Order ID</h2>
+						</td>
+						<td>
+							<h3 align="center">Status</h2>
+						</td>
+						<td>
+							<h3 align="center">Payment Method</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							AG21353
+						</td>
+						<td>
+							Paid
+						</td>
+						<td>
+							Online Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21365
+						</td>
+						<td>
+							Paid
+						</td>
+						<td>
+							Mobile Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21367
+						</td>
+						<td>
+							Paid
+						</td>
+						<td>
+							Mobile Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21368
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Mobile Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21371
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Online Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21441
+						</td>
+						<td>
+							Paid
+						</td>
+						<td>
+							Mobile Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21462
+						</td>
+						<td>
+							Paid
+						</td>
+						<td>
+							Online Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21488
+						</td>
+						<td>
+							Paid
+						</td>
+						<td>
+							Mobile Banking
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							AG21521
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Online Banking
+						</td>
+						
+					</tr>
+				</table>
 			</td>
 		</tr>
 	</table>

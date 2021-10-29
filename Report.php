@@ -26,19 +26,40 @@
 			<td  rowspan="3">
 				<h3>
 				<a href="Profile.php">Profile</a><br>
-				<a href="OrderList.php">Order List</a><br>
-				<a href="Transaction.php">Transaction</a><br>
-				<a href="Contact.php">Contact</a><br>
 				<a href="CustomerInfo.php">Customer Information</a><br>
-				<a href="Sellers.php">Sellers</a><br>
+				<a href="Sellers.php">Seller's Information</a><br>
+				<a href="Contact.php">Contact</a><br>
+				<a href="OrderList.php">Order List</a><br>
+				<a href="ListedItems.php">Listed Items</a><br>
+				<a href="Transaction.php">Transaction</a><br>
 				<a href="ManageOrder.php">Manage Order</a><br>
 				<a href="PaymentInfo.php">Payment Info</a><br>
 				<a href="Report.php">Send Report</a><br>
-				<a href="ListedItems.php">Listed Items</a><br>
 				<a href="History.php">History</a><br>
 				<a href="UpdateInfo.php">Information</a><br>
 				<a href="News.php">News</a>
 			</h3>
+			</td>
+			<td>
+				<center>
+					<form method="POST" action="">
+  				<h2>Type your issue over here:<br>
+  				<input type="text" name="inputfield"  style=" height: 300px; width:500px;"><br><br>
+
+   				<input type="submit" value="Submit" style=" height: 50px; width:100px;"></h2>
+  				</form>
+  			</center>
+				<?php
+              
+					if(isset($_POST['inputfield']))
+				{
+					$data=$_POST['inputfield'];
+					$fp = fopen('data.txt', 'a');
+					fwrite($fp, $data);
+					fclose($fp);
+					(isset($_POST['inputfield'])) ? "value = ".$_POST["inputfield"] : "value = \"\""; 
+				}
+				?>
 			</td>
 		</tr>
 	</table>
