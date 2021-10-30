@@ -10,7 +10,7 @@
 	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
-			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
+			<td><h2 align="center"><font face="Garamond"> Agricultural Bangladesh </font></h2><br>
 				<a href="https://www.google.com/" target="_blank">google |</a>
 				<a href="https://www.facebook.com/sm.tusher.avoid/" target="_blank">facebook |</a>
 				<a href="https://twitter.com/?lang=en" target="_blank">twitter |</a>
