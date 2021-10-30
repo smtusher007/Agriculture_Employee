@@ -1,9 +1,13 @@
+<?php
+
+	include('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>Contacts</title>
+	<title>PaymentInfo</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -15,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Contacts</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Payment Information</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -44,199 +48,122 @@
 				<table border="1" align="center" width="80%" height="300px">
 					<tr>
 						<td>
-							<h3 align="center">Name</h3>
+							<h3 align="center">Order ID</h2>
 						</td>
 						<td>
-							<h3 align="center">Type</h3>
+							<h3 align="center">Status</h2>
 						</td>
 						<td>
-							<h3 align="center">Email</h3>
-						</td>
-						<td>
-							<h3 align="center">Phone No.</h3>
+							<h3 align="center">Payment Method</h2>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Abdul Latif 
+							AG21353
 						</td>
 						<td>
-							Customer
+							Paid
 						</td>
 						<td>
-							latif@gamil.com
+							Online Banking
 						</td>
-						<td>
-							+8801782482761
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Kamrul Hasan
+							AG21365
 						</td>
 						<td>
-							Customer
+							Paid
 						</td>
 						<td>
-							kamrul@yahoo.com
+							Mobile Banking
 						</td>
-						<td>
-							+8801982582868
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Hasan Sheikh
+							AG21367
 						</td>
 						<td>
-							Seller
+							Paid
 						</td>
 						<td>
-							hasanshk1@gamil.com
+							Mobile Banking
 						</td>
-						<td>
-							+8801962382845
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Jahangir Alam
+							AG21368
 						</td>
 						<td>
-							Customer
+							Pending
 						</td>
 						<td>
-							jahangir@yahoo.com
+							Mobile Banking
 						</td>
-						<td>
-							+8801832372559
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Hussain Mohammah
+							AG21371
 						</td>
 						<td>
-							Seller
+							Pending
 						</td>
 						<td>
-							hussain23@yahoo.com
+							Online Banking
 						</td>
-						<td>
-							+8801735375556
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Kader Hamid
+							AG21441
 						</td>
 						<td>
-							Seller
+							Paid
 						</td>
 						<td>
-							kaderhamid@yahoo.com
+							Mobile Banking
 						</td>
-						<td>
-							+8801346878576
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Halimullah
+							AG21462
 						</td>
 						<td>
-							Customer
+							Paid
 						</td>
 						<td>
-							halim54@yahoo.com
+							Online Banking
 						</td>
-						<td>
-							+8801546673988
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Kalam Jufiker
+							AG21488
 						</td>
 						<td>
-							Seller
+							Paid
 						</td>
 						<td>
-							kalamjulfiker@gmail.com
+							Mobile Banking
 						</td>
-						<td>
-							+8801886973583
-						</td>
+						
 					</tr>
 					<tr>
 						<td>
-							Chan Mia
+							AG21521
 						</td>
 						<td>
-							Customer
+							Pending
 						</td>
 						<td>
-							chanmia556@gmail.com
+							Online Banking
 						</td>
-						<td>
-							+8801985633556
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Jahan Muhammah
-						</td>
-						<td>
-							Customer
-						</td>
-						<td>
-							jahan004@gmail.com
-						</td>
-						<td>
-							+8801758963778
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Badsha Ali Sheikh
-						</td>
-						<td>
-							Seller
-						</td>
-						<td>
-							badsha56@yahoo.com
-						</td>
-						<td>
-							+8801589954763
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Idris Sarker
-						</td>
-						<td>
-							Seller
-						</td>
-						<td>
-							idrissarker@gmail.com
-						</td>
-						<td>
-							+8801798863851
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Jakir Hossain
-						</td>
-						<td>
-							Seller
-						</td>
-						<td>
-							jakirhossain@gmail.com
-						</td>
-						<td>
-							+8801336567841
-						</td>
+						
 					</tr>
 				</table>
 			</td>

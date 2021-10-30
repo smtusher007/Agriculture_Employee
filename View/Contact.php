@@ -1,9 +1,13 @@
+<?php
+
+	include_once('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>CustomerInfo</title>
+	<title>Contacts</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -15,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Customer Information</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Contacts</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -47,7 +51,7 @@
 							<h3 align="center">Name</h3>
 						</td>
 						<td>
-							<h3 align="center">NID</h3>
+							<h3 align="center">Type</h3>
 						</td>
 						<td>
 							<h3 align="center">Email</h3>
@@ -55,19 +59,13 @@
 						<td>
 							<h3 align="center">Phone No.</h3>
 						</td>
-						<td>
-							<h3 align="center">Adress</h3>
-						</td>
-						<td>
-							<h3 align="center">Photo</h3>
-						</td>
 					</tr>
 					<tr>
 						<td>
-							Abdul Latif
+							Abdul Latif 
 						</td>
 						<td>
-							63527352690
+							Customer
 						</td>
 						<td>
 							latif@gamil.com
@@ -75,19 +73,13 @@
 						<td>
 							+8801782482761
 						</td>
-						<td>
-							20/2 Kumarkhali,Rangpur
-						</td>
-						<td>
-							<center><img src="Asset/AbdulLatif.jpg" width="100px" height="100px"></center>
-						</td>
 					</tr>
 					<tr>
 						<td>
 							Kamrul Hasan
 						</td>
 						<td>
-							80321345128
+							Customer
 						</td>
 						<td>
 							kamrul@yahoo.com
@@ -95,11 +87,19 @@
 						<td>
 							+8801982582868
 						</td>
+					</tr>
+					<tr>
 						<td>
-							34/8 Rampura, Dhaka
+							Hasan Sheikh
 						</td>
 						<td>
-							<center><img src="Asset/KamrulHasan.jfif" width="100px" height="100px"></center>
+							Seller
+						</td>
+						<td>
+							hasanshk1@gamil.com
+						</td>
+						<td>
+							+8801962382845
 						</td>
 					</tr>
 					<tr>
@@ -107,7 +107,7 @@
 							Jahangir Alam
 						</td>
 						<td>
-							44731576187
+							Customer
 						</td>
 						<td>
 							jahangir@yahoo.com
@@ -115,11 +115,33 @@
 						<td>
 							+8801832372559
 						</td>
+					</tr>
+					<tr>
 						<td>
-							2no. House, 37 no. Road, Hasanbag, Rajshahi
+							Hussain Mohammah
 						</td>
 						<td>
-							<center><img src="Asset/JahangirAlam.jpg" width="100px" height="100px"></center>
+							Seller
+						</td>
+						<td>
+							hussain23@yahoo.com
+						</td>
+						<td>
+							+8801735375556
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Kader Hamid
+						</td>
+						<td>
+							Seller
+						</td>
+						<td>
+							kaderhamid@yahoo.com
+						</td>
+						<td>
+							+8801346878576
 						</td>
 					</tr>
 					<tr>
@@ -127,7 +149,7 @@
 							Halimullah
 						</td>
 						<td>
-							56821675127
+							Customer
 						</td>
 						<td>
 							halim54@yahoo.com
@@ -135,11 +157,19 @@
 						<td>
 							+8801546673988
 						</td>
+					</tr>
+					<tr>
 						<td>
-							Kamarbari, Mongla, Khulna
+							Kalam Jufiker
 						</td>
 						<td>
-							<center><img src="Asset/Halimullah.png" width="100px" height="100px"></center>
+							Seller
+						</td>
+						<td>
+							kalamjulfiker@gmail.com
+						</td>
+						<td>
+							+8801886973583
 						</td>
 					</tr>
 					<tr>
@@ -147,19 +177,13 @@
 							Chan Mia
 						</td>
 						<td>
-							32461772931
+							Customer
 						</td>
 						<td>
 							chanmia556@gmail.com
 						</td>
 						<td>
 							+8801985633556
-						</td>
-						<td>
-							Uttarkandi, Jhalokathi, Barisal
-						</td>
-						<td>
-							<center><img src="Asset/ChanMia.jpg" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
@@ -167,22 +191,57 @@
 							Jahan Muhammah
 						</td>
 						<td>
-							54471973920
+							Customer
 						</td>
 						<td>
-							chanmia556@gmail.com
+							jahan004@gmail.com
 						</td>
 						<td>
-							+8801985633556
-						</td>
-						<td>
-							Uttarkandi, Jhalokathi, Barisal
-						</td>
-						<td>
-							<center><img src="Asset/JahanMuhammah.jpg" width="100px" height="100px"></center>
+							+8801758963778
 						</td>
 					</tr>
-					
+					<tr>
+						<td>
+							Badsha Ali Sheikh
+						</td>
+						<td>
+							Seller
+						</td>
+						<td>
+							badsha56@yahoo.com
+						</td>
+						<td>
+							+8801589954763
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Idris Sarker
+						</td>
+						<td>
+							Seller
+						</td>
+						<td>
+							idrissarker@gmail.com
+						</td>
+						<td>
+							+8801798863851
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Jakir Hossain
+						</td>
+						<td>
+							Seller
+						</td>
+						<td>
+							jakirhossain@gmail.com
+						</td>
+						<td>
+							+8801336567841
+						</td>
+					</tr>
 				</table>
 			</td>
 		</tr>

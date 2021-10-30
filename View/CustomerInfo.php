@@ -1,12 +1,16 @@
+<?php
+
+	include_once('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>Order List</title>
+	<title>CustomerInfo</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
-			<<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
+			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
 				<a href="https://www.google.com/" target="_blank">google |</a>
 				<a href="https://www.facebook.com/sm.tusher.avoid/" target="_blank">facebook |</a>
 				<a href="https://twitter.com/?lang=en" target="_blank">twitter |</a>
@@ -15,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Order List</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Customer Information</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -44,205 +48,165 @@
 				<table border="1" align="center" width="80%" height="300px">
 					<tr>
 						<td>
-							<h3 align="center">Order ID</h3>
+							<h3 align="center">Name</h3>
 						</td>
 						<td>
-							<h3 align="center">Customer Name</h3>
+							<h3 align="center">NID</h3>
 						</td>
 						<td>
-							<h3 align="center">Seller Name</h3>
+							<h3 align="center">Email</h3>
 						</td>
 						<td>
-							<h3 align="center">Ordered Item</h3>
+							<h3 align="center">Phone No.</h3>
 						</td>
 						<td>
-							<h3 align="center">Quantity</h3>
+							<h3 align="center">Adress</h3>
 						</td>
 						<td>
-							<h3 align="center">Price</h3>
+							<h3 align="center">Photo</h3>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							AG21353
-						</td>
 						<td>
 							Abdul Latif
 						</td>
 						<td>
-							Hasan Sheikh
+							63527352690
 						</td>
 						<td>
-							Carica Papaya Seed
+							latif@gamil.com
 						</td>
 						<td>
-							2 packs
+							+8801782482761
 						</td>
 						<td>
-							200Tk
+							20/2 Kumarkhali,Rangpur
+						</td>
+						<td>
+							<center><img src="../Asset/AbdulLatif.jpg" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							AG21365
-						</td>
 						<td>
 							Kamrul Hasan
 						</td>
 						<td>
-							Kalam Julfiker
+							80321345128
 						</td>
 						<td>
-							Eggplant Seeds
+							kamrul@yahoo.com
 						</td>
 						<td>
-							4 packs
+							+8801982582868
 						</td>
 						<td>
-							300Tk
+							34/8 Rampura, Dhaka
+						</td>
+						<td>
+							<center><img src="../Asset/KamrulHasan.jfif" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							AG21367
-						</td>
-						<td>
-							Kamrul Hasan
-						</td>
-						<td>
-							Hussain Mohammad
-						</td>
-						<td>
-							Cabbage Seeds
-						</td>
-						<td>
-							30 pcs
-						</td>
-						<td>
-							50Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21368
-						</td>
 						<td>
 							Jahangir Alam
 						</td>
 						<td>
-							Kader Hamid
+							44731576187
 						</td>
 						<td>
-							Capsicum Seeds
+							jahangir@yahoo.com
 						</td>
 						<td>
-							100 pcs
+							+8801832372559
 						</td>
 						<td>
-							200Tk
+							2no. House, 37 no. Road, Hasanbag, Rajshahi
+						</td>
+						<td>
+							<center><img src="../Asset/JahangirAlam.jpg" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							AG21371
-						</td>
-						
 						<td>
 							Halimullah
 						</td>
 						<td>
-							Kalam Julfiker
+							56821675127
 						</td>
 						<td>
-							Eggplant Seeds
+							halim54@yahoo.com
 						</td>
 						<td>
-							5 packs
+							+8801546673988
 						</td>
 						<td>
-							400Tk
+							Kamarbari, Mongla, Khulna
+						</td>
+						<td>
+							<center><img src="../Asset/Halimullah.png" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							AG21441
-						</td>
 						<td>
 							Chan Mia
 						</td>
 						<td>
-							Badsha Ali Sheikh
+							32461772931
 						</td>
 						<td>
-							Cucumber Seeds
+							chanmia556@gmail.com
 						</td>
 						<td>
-							2 packs
+							+8801985633556
 						</td>
 						<td>
-							400Tk
+							Uttarkandi, Jhalokathi, Barisal
+						</td>
+						<td>
+							<center><img src="../Asset/ChanMia.jpg" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							AG21462
+							Jahan Muhammah
 						</td>
 						<td>
-							Jahan Muhammad
+							54471973920
 						</td>
 						<td>
-							Idris Sarker
+							chanmia556@gmail.com
 						</td>
 						<td>
-							Papaya Seeds
+							+8801985633556
 						</td>
 						<td>
-							1 packs
+							New Kakrail Road, Dhaka
 						</td>
 						<td>
-							50Tk
+							<center><img src="../Asset/JahanMuhammah.jpg" width="100px" height="100px"></center>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							AG21488
-						</td>
-						<td>
-							Kamrul hasan
-						</td>
-						<td>
-							Jakir Hossain
-						</td>
-						<td>
-							Mini sprayer
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							300Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21521
-						</td>
 						<td>
 							Taranath Kumar
 						</td>
 						<td>
-							Jakir Hossain
+							83173413450
 						</td>
 						<td>
-							Cultivator
+							taranathkumar@yahoo.com
 						</td>
 						<td>
-							1
+							+8801632218918
 						</td>
 						<td>
-							5,000tk
+							North Asad Gate, Mohammadpur, Dhaka
+						</td>
+						<td>
+							<center><img src="../Asset/TaranathKumar.jfif" width="100px" height="100px"></center>
 						</td>
 					</tr>
+					
 				</table>
 			</td>
 		</tr>

@@ -1,9 +1,13 @@
+<?php
+
+	include_once('../Controller/Header.php');
+?>
 <html>
 <head>
 	<title>Sellers</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -79,7 +83,7 @@
 							house #1468, road #146, Dhanmondi ,Dhaka
 						</td>
 						<td>
-							<img src="Asset/HasanSheikh.jpg" width="100px" height="100px">
+							<img src="../Asset/HasanSheikh.jpg" width="100px" height="100px">
 						</td>
 					</tr>
 					<tr>
@@ -99,7 +103,7 @@
 							Nizam road, Chittagong, 4000
 						</td>
 						<td>
-							<img src="Asset/HussainMohammah.png" width="100px" height="100px">
+							<img src="../Asset/HussainMohammah.png" width="100px" height="100px">
 						</td>
 					</tr>
 					<tr>
@@ -119,7 +123,7 @@
 							Free school street, Kathalbagan, Dhanmondi, 1205
 						</td>
 						<td>
-							<img src="Asset/KaderHamid.jpg" width="100px" height="100px">
+							<img src="../Asset/KaderHamid.jpg" width="100px" height="100px">
 						</td>
 					</tr>
 					<tr>
@@ -139,7 +143,7 @@
 							Lutfan Tower, Middle badda, badda, 1212
 						</td>
 						<td>
-							<img src="Asset/KalamJufiker.jpg" width="100px" height="100px">
+							<img src="../Asset/KalamJufiker.jpg" width="100px" height="100px">
 						</td>
 					</tr>
 					<tr>
@@ -159,7 +163,7 @@
 							11, Ulon, West Rampura, 1219
 						</td>
 						<td>
-							<img src="Asset/BadshaAliSheikh.jpg" width="100px" height="100px">
+							<img src="../Asset/BadshaAliSheikh.jpg" width="100px" height="100px">
 						</td>
 					</tr>
 					<tr>
@@ -179,7 +183,7 @@
 							Stadium market, Sylhet, Sylhet, 3100
 						</td>
 						<td>
-							<img src="Asset/IdrisSarker.jfif" width="100px" height="100px">
+							<img src="../Asset/IdrisSarker.jfif" width="100px" height="100px">
 						</td>
 					</tr>
 					<tr>
@@ -199,7 +203,7 @@
 							Pirjabad, Rangpur, 5400
 						</td>
 						<td>
-							<img src="Asset/JakirHossain.jpg" width="100px" height="100px">
+							<img src="../Asset/JakirHossain.jpg" width="100px" height="100px">
 						</td>
 					</tr>
 				</table>

@@ -1,9 +1,13 @@
+<?php
+
+	include_once('../Controller/Header.php');
+?>
 <html>
 <head>
 	<title>History</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -39,6 +43,80 @@
 				<a href="UpdateInfo.php">Information</a><br>
 				<a href="News.php">News</a>
 			</h3>
+			</td>
+			<td>
+				<table border="1" align="center" width="80%" height="300px">
+					<tr>
+						<td>
+							<h2><?php
+								$file = fopen("../Asset/history1.txt","r");
+
+								while(! feof($file))
+  								{
+  									echo fgets($file). "<br />";
+  									}
+
+ 									fclose($file);
+							?> </h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2><?php
+								$file = fopen("../Asset/history2.txt","r");
+
+								while(! feof($file))
+  								{
+  									echo fgets($file). "<br />";
+  									}
+
+ 									fclose($file);
+							?> </h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2><?php
+								$file = fopen("../Asset/history3.txt","r");
+
+								while(! feof($file))
+  								{
+  									echo fgets($file). "<br />";
+  									}
+
+ 									fclose($file);
+							?> </h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2><?php
+								$file = fopen("../Asset/history4.txt","r");
+
+								while(! feof($file))
+  								{
+  									echo fgets($file). "<br />";
+  									}
+
+ 									fclose($file);
+							?> </h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2><?php
+								$file = fopen("../Asset/history5.txt","r");
+
+								while(! feof($file))
+  								{
+  									echo fgets($file). "<br />";
+  									}
+
+ 									fclose($file);
+							?> </h2>
+						</td>
+					</tr>
+				</table>
 			</td>
 		</tr>
 	</table>

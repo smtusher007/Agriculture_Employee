@@ -1,9 +1,13 @@
+<?php
+
+	include('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>SendReport</title>
+	<title>Employee</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -15,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Send Report</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Welcome to 'company name'</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -41,25 +45,26 @@
 			</h3>
 			</td>
 			<td>
-				<center>
-					<form method="POST" action="">
-  				<h2>Type your issue over here:<br>
-  				<input type="text" name="inputfield"  style=" height: 300px; width:500px;"><br><br>
+				
+    			<h3> 
+    				<?php
+					$file = fopen("../Asset/Home.txt","r");
 
-   				<input type="submit" value="Submit" style=" height: 50px; width:100px;"></h2>
-  				</form>
-  			</center>
-				<?php
-              
-					if(isset($_POST['inputfield']))
-				{
-					$data=$_POST['inputfield'];
-					$fp = fopen('data.txt', 'a');
-					fwrite($fp, $data);
-					fclose($fp);
-					(isset($_POST['inputfield'])) ? "value = ".$_POST["inputfield"] : "value = \"\""; 
-				}
-				?>
+					while(! feof($file))
+  					{
+  					echo fgets($file). "<br />";
+  					}
+
+ 					fclose($file);
+					?> 
+				</h3>
+				<img src="../Asset/Home1.jpg" height="200" width="295">
+				<img src="../Asset/Home2.jpg" height="200" width="295">
+				<img src="../Asset/Home3.jpg" height="200" width="295">
+				<img src="../Asset/Home4.jpg" height="200" width="295">
+				<marquee direction="right" behavior="alternate" bgcolor="#d1820a">
+        			**This site has been developed by S M TUSHER MUSTAKIM as WebTech project**
+    			</marquee>
 			</td>
 		</tr>
 	</table>

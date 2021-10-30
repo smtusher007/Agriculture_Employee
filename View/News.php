@@ -1,9 +1,13 @@
+<?php
+
+	require_once('../Controller/Header.php');
+?>
 <html>
 <head>
 	<title>News</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -44,7 +48,7 @@
 			<td>
 				<h2 align="left">
 				<?php
-					$file = fopen("Head1.txt","r");
+					$file = fopen("../Asset/Head1.txt","r");
 
 					while(! feof($file))
   					{
@@ -60,7 +64,7 @@
 				</h2>
 				<h2 align="left">
 				<?php
-					$file = fopen("Head2.txt","r");
+					$file = fopen("../Asset/Head2.txt","r");
 
 					while(! feof($file))
   					{
@@ -76,7 +80,7 @@
 				</h2>
 				<h2 align="left">
 				<?php
-					$file = fopen("Head3.txt","r");
+					$file = fopen("../Asset/Head3.txt","r");
 
 					while(! feof($file))
   					{
@@ -92,7 +96,7 @@
 				</h2>
 				<h2 align="left">
 				<?php
-					$file = fopen("Head4.txt","r");
+					$file = fopen("../Asset/Head4.txt","r");
 
 					while(! feof($file))
   					{
@@ -108,7 +112,7 @@
 				</h2>
 				<h2 align="left">
 				<?php
-					$file = fopen("Head5.txt","r");
+					$file = fopen("../Asset/Head5.txt","r");
 
 					while(! feof($file))
   					{

@@ -1,10 +1,13 @@
+<?php
 
+	include('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>Employee</title>
+	<title>Information</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -16,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Welcome to 'company name'</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Information</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -42,10 +45,9 @@
 			</h3>
 			</td>
 			<td>
-				
-    			<h3> 
-    				<?php
-					$file = fopen("Home.txt","r");
+				<h2 align="left">
+				<?php
+					$file = fopen("../Asset/InformationUpdate.txt","r");
 
 					while(! feof($file))
   					{
@@ -53,15 +55,13 @@
   					}
 
  					fclose($file);
-					?> 
-				</h3>
-				<img src="Home1.jpg" height="200" width="295">
-				<img src="Home2.jpg" height="200" width="295">
-				<img src="Home3.jpg" height="200" width="295">
-				<img src="Home4.jpg" height="200" width="295">
-				<marquee direction="right" behavior="alternate" bgcolor="#d1820a">
-        			**This site has been developed by S M TUSHER MUSTAKIM as WebTech project**
-    			</marquee>
+					?>
+
+				</h2>
+				<img src="../Asset/Info1.jpg" height="300px" width="550px">
+				<img src="../Asset/Info2.jpg" height="300px" width="550px">
+				<img src="../Asset/Info3.png" height="300px" width="550px">
+				<img src="../Asset/Info4.jpg" height="300px" width="550px">
 			</td>
 		</tr>
 	</table>

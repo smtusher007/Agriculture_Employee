@@ -1,9 +1,13 @@
+<?php
+
+	include('../Controller/Header.php');
+?>
 <html>
 <head>
 	<title>ListedItems</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>

@@ -1,9 +1,13 @@
+<?php
+
+	include('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>Information</title>
+	<title>Employee Profile</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -15,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Information</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Profile</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -40,24 +44,51 @@
 				<a href="News.php">News</a>
 			</h3>
 			</td>
+
 			<td>
-				<h2 align="left">
-				<?php
-					$file = fopen("InformationUpdate.txt","r");
+				<table align="center" border="1">
+					<tr>
+						<td colspan="2"> 
+							<h1 align="center"> William Russie </h1>
+							<center><img src="../Asset/Willam.jpg" alt="William" width="300" height="300" ></center>
 
-					while(! feof($file))
-  					{
-  					echo fgets($file). "<br />";
-  					}
+						</td>
+					</tr>
+					<tr>
+						<td><h3>ID</h3></td>
+						<td><h3 align="center">66-54345-0</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Adress</h3></td>
+						<td><h3 align="center">Columbus Street,San Francisco, CA, USA</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Email</h3></td>
+						<td><h3 align="center">willrussie@yahoo.com</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Phone No.</h3></td>
+						<td><h3 align="center">+854685421, +880176235123</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Date of Birth</h3></td>
+						<td><h3 align="center">25-05-1994</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Maretial Status</h3></td>
+						<td><h3 align="center">Single</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Joined on</h3></td>
+						<td><h3 align="center">02-07-2019</h3></td>
+					</tr>
+					<tr>
+						<td><h3>Salary</h3></td>
+						<td><h3 align="center">30,000tk</h3></td>
+					</tr>
 
- 					fclose($file);
-					?>
+				</table>
 
-				</h2>
-				<img src="Asset/Info1.jpg" height="300px" width="550px">
-				<img src="Asset/Info2.jpg" height="300px" width="550px">
-				<img src="Asset/Info3.png" height="300px" width="550px">
-				<img src="Asset/Info4.jpg" height="300px" width="550px">
 			</td>
 		</tr>
 	</table>

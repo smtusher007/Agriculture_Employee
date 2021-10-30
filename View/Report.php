@@ -1,9 +1,13 @@
+<?php
+
+	require_once('../Controller/Header.php');
+?>
 <html>
 <head>
-	<title>Manage Order</title>
+	<title>SendReport</title>
 </head>
 <body>
-	<div style="background-image: url('img1.jpg');">
+	<div style="background-image: url('../Asset/img1.jpg');">
 	<table border="1" width="100%">
 		<tr height="100px">
 			<td><h2 align="center"><font face="Garamond"> Company Name </font></h2><br>
@@ -15,7 +19,7 @@
 
 			</td>
 			<td width="80%" colspan="2">
-				<h1 align="center"><font face="Garamond" color="blue">Manage Order</font></h1>
+				<h1 align="center"><font face="Garamond" color="blue">Send Report</font></h1>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
@@ -39,6 +43,27 @@
 				<a href="UpdateInfo.php">Information</a><br>
 				<a href="News.php">News</a>
 			</h3>
+			</td>
+			<td>
+				<center>
+					<form method="POST" action="">
+  				<h2>Type your issue over here:<br>
+  				<input type="text" name="inputfield"  style=" height: 300px; width:500px;"><br><br>
+
+   				<input type="submit" value="Submit" style=" height: 50px; width:100px;"></h2>
+  				</form>
+  			</center>
+				<?php
+              
+					if(isset($_POST['inputfield']))
+				{
+					$data=$_POST['inputfield'];
+					$fp = fopen('../Model/data.txt', 'a');
+					fwrite($fp, $data);
+					fclose($fp);
+					(isset($_POST['inputfield'])) ? "value = ".$_POST["inputfield"] : "value = \"\""; 
+				}
+				?>
 			</td>
 		</tr>
 	</table>
