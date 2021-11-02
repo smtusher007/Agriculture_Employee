@@ -50,7 +50,13 @@
 					<tr>
 						<td colspan="2"> 
 							<h1 align="center"> William Russie </h1>
-							<center><img src="../Asset/Willam.jpg" alt="William" width="300" height="300" ></center>
+							<center><img src="../Asset/Willam.jpg" alt="William" width="300" height="300" >
+							<form method="POST" action="../Controller/Fileupload.php" enctype="multipart/form-data">
+								<fieldset>
+									Image Upload: <input type="file" name="myfile"/>
+									<input type="submit" name="submit" value="Submit"/>
+								</fieldset>
+							</form>
 
 						</td>
 					</tr>

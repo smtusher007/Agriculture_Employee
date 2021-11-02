@@ -20,6 +20,12 @@
 			</td>
 			<td width="80%" colspan="2">
 				<h1 align="center"><font face="Garamond" color="blue">Welcome to Agricultural Bangladesh</font></h1>
+				<?php
+
+					echo "Today is " . date("d.m.Y")." ";
+					echo  "(".date("l").")";
+				?>
+				<h5>
 				<h4 align="right">
 					<a href="Home.php">Home || </a>
 					<a href="Logout.php">Logout</a>
