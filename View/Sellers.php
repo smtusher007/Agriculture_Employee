@@ -1,6 +1,9 @@
 <?php
 
 	include_once('../Controller/Header.php');
+	require_once('../Model/sellerModel.php');
+	$result = AllSeller();
+	$count = mysqli_num_rows($result);
 ?>
 <html>
 <head>
@@ -46,23 +49,85 @@
 			</td>
 			<td>
 				<h3>Add Seller:</h3>
-				<form method="post" action="../Controller/seller.php">
+					<script type="text/javascript">
+					function validate()
+					{
+ 						let Ssname = document.getElementById( "SsName" );
+ 						let SsId = document.getElementById("SsId");
+ 						let SsEmail = document.getElementById("SsEmail");
+ 						let SsPhone = document.getElementById("SsPhone");
+ 						let SsAddress = document.getElementById("SsAddress");
+ 						if( Ssname.value == "" || SsId.value=="" || SsEmail.value=="" ||SsPhone.value=="" ||SsAddress.value=="")
+ 						{
+  						alert("Please fill the empty field");
+  						return false;
+						 }
+						 else{
+						 	return true;
+						 }
+
+					}
+				</script>
+				<form method="post" onsubmit="return validate();" action="../Controller/seller.php">
 					Name:
-					<input type="text" name="SsName" placeholder="Type Full Name">
+					<input type="text" id="SsName" name="SsName" placeholder="Type Full Name">
 					NID:
-					<input type="text" name="SsId" placeholder="Type NID Number">
+					<input type="text" id="SsId" name="SsId" placeholder="Type NID Number">
 					Email:
-					<input type="email" name="SsEmail" placeholder="Type valid email">
+					<input type="email" id="SsEmail" name="SsEmail" placeholder="Type valid email">
 					PhoneNo:
-					<input type="text" name="SsPhone" placeholder="Type PhoneNo">
+					<input type="text"  id="SsPhone" name="SsPhone" placeholder="Type PhoneNo">
 					Address:
-					<input type="text" name="SsAddress" placeholder="Type Adress">
+					<input type="text" id="SsAddress" name="SsAddress" placeholder="Type Adress">
 					<input type="submit" name="submit" value="Submit">
 
 				</form>
+				<table border="1" align="center">
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>NID</th>
+							<th>Email</th>
+							<th>Phone No.</th>
+							<th>Address</th>
+							<th>Action</th>
+						</tr>
+<?php while($data = mysqli_fetch_assoc($result)){?>
+						<tr>
+							<td><?=$data['id']?></td>
+							<td><?=$data['name']?></td>
+							<td><?=$data['nid']?></td>
+							<td><?=$data['email']?></td>
+							<td><?=$data['phoneNo']?></td>
+							<td><?=$data['address']?></td>
+							<td>
+								<a href="edit.php">Edit</a>
+								<a href="delete.php">Delete</a>
+							</td>
+						</tr>
+<?php } ?>
+				</table>
 			</td>
 		</tr>
 	</table>
+	<script type="text/javascript">
+		function ajax(){
+	let SsName = document.getElementById('SsName').value;
+	let SsId = document.getElementById('SsId').value;
+	let SsEmail = document.getElementById('SsEmail').value;
+	let SsPhone = document.getElementById('SsPhone').value;
+	let SsAddress = document.getElementById('SsAddress').value; 
 
+	let xhttp = new XMLHttpRequest();
+	xhttp.open('POST', '../Controller/seller.php', false);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send('SsName='+SsName);
+	xhttp.send('SsId='+SsId);
+	xhttp.send('SsEmail='+SsEmail);
+	xhttp.send('SsPhone='+SsPhone);
+	xhttp.send('SsAddress='+SsAddress);
+	
+}
+	</script>
 </body>
 </html>

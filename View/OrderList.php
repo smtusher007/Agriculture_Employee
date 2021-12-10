@@ -1,6 +1,9 @@
 <?php
 
 	include('../Controller/Header.php');
+	require_once('../Model/orderModel.php');
+	$result = Orderlist();
+	$count = mysqli_num_rows($result);
 ?>
 <html>
 <head>
@@ -44,213 +47,89 @@
 				<a href="News.php">News</a>
 			</h3>
 			</td>
+			
 			<td>
-				<table border="1" align="center" width="80%" height="300px">
-					<tr>
-						<td>
-							<h3 align="center">Order ID</h3>
-						</td>
-						<td>
-							<h3 align="center">Customer Name</h3>
-						</td>
-						<td>
-							<h3 align="center">Seller Name</h3>
-						</td>
-						<td>
-							<h3 align="center">Ordered Item</h3>
-						</td>
-						<td>
-							<h3 align="center">Quantity</h3>
-						</td>
-						<td>
-							<h3 align="center">Price</h3>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21353
-						</td>
-						<td>
-							Abdul Latif
-						</td>
-						<td>
-							Hasan Sheikh
-						</td>
-						<td>
-							Carica Papaya Seed
-						</td>
-						<td>
-							2 packs
-						</td>
-						<td>
-							200Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21365
-						</td>
-						<td>
-							Kamrul Hasan
-						</td>
-						<td>
-							Kalam Julfiker
-						</td>
-						<td>
-							Eggplant Seeds
-						</td>
-						<td>
-							4 packs
-						</td>
-						<td>
-							300Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21367
-						</td>
-						<td>
-							Kamrul Hasan
-						</td>
-						<td>
-							Hussain Mohammad
-						</td>
-						<td>
-							Cabbage Seeds
-						</td>
-						<td>
-							30 pcs
-						</td>
-						<td>
-							50Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21368
-						</td>
-						<td>
-							Jahangir Alam
-						</td>
-						<td>
-							Kader Hamid
-						</td>
-						<td>
-							Capsicum Seeds
-						</td>
-						<td>
-							100 pcs
-						</td>
-						<td>
-							200Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21371
-						</td>
-						
-						<td>
-							Halimullah
-						</td>
-						<td>
-							Kalam Julfiker
-						</td>
-						<td>
-							Eggplant Seeds
-						</td>
-						<td>
-							5 packs
-						</td>
-						<td>
-							400Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21441
-						</td>
-						<td>
-							Chan Mia
-						</td>
-						<td>
-							Badsha Ali Sheikh
-						</td>
-						<td>
-							Cucumber Seeds
-						</td>
-						<td>
-							2 packs
-						</td>
-						<td>
-							400Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21462
-						</td>
-						<td>
-							Jahan Muhammad
-						</td>
-						<td>
-							Idris Sarker
-						</td>
-						<td>
-							Papaya Seeds
-						</td>
-						<td>
-							1 packs
-						</td>
-						<td>
-							50Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21488
-						</td>
-						<td>
-							Kamrul hasan
-						</td>
-						<td>
-							Jakir Hossain
-						</td>
-						<td>
-							Mini sprayer
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							300Tk
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21521
-						</td>
-						<td>
-							Taranath Kumar
-						</td>
-						<td>
-							Jakir Hossain
-						</td>
-						<td>
-							Cultivator
-						</td>
-						<td>
-							1
-						</td>
-						<td>
-							5,000tk
-						</td>
-					</tr>
+				<h3 align="center">List some Order:<br>
+					<script type="text/javascript">
+					function validate()
+					{
+ 						let CuName = document.getElementById( "CuName" );
+ 						let SeName = document.getElementById("SeName");
+ 						let Item = document.getElementById("Item");
+ 						let Quantity = document.getElementById("Quantity");
+ 						let Price = document.getElementById("Price");
+ 						if( CuName.value == "" || SeName.value=="" || Item.value=="" ||Quantity.value=="" ||Price.value=="")
+ 						{
+  						alert("Please fill the empty field");
+  						return false;
+						 }
+						 else{
+						 	return true;
+						 }
+
+					}
+				</script>
+				<form method="post" onsubmit="return validate();" action="../Controller/order.php">
+					Customer Name:
+					<input type="text" id="CuName" name="CuName" placeholder="Type Full Name"><br>
+					Seller Name:
+					<input type="text" id="SeName" name="SeName" placeholder="Type Full Name"><br>
+					Order Item:
+					<input type="text" id="Item" name="Item" placeholder="Type Item"><br>
+					Quantity:
+					<input type="text" id="QuQuantityantity" name="Quantity" placeholder="Type ordered Quantity"><br>
+					Price:
+					<input type="text" id="Price" name="Price" placeholder="Type price"><br>
+					<input type="submit" name="submit" value="Enter"></h3>
+
+				</form>
+				<table border="1" align="center">
+						<tr>
+							<th>ORDER ID</th>
+							<th>Customer Name</th>
+							<th>Seller Name</th>
+							<th>Ordered Item</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Action</th>
+						</tr>
+<?php while($data = mysqli_fetch_assoc($result)){?>
+						<tr>
+							<td><?=$data['id']?></td>
+							<td><?=$data['customerName']?></td>
+							<td><?=$data['sellerName']?></td>
+							<td><?=$data['orderedItem']?></td>
+							<td><?=$data['quantity']?></td>
+							<td><?=$data['price']?></td>
+							<td>
+								<a href="../Controller/editOrder.php?id=<?=$data['id']?>">Edit</a>
+								<a href="../Controller/deleteOrder.php?id=<?=$data['id']?>">Delete</a>
+							</td>
+						</tr>
+<?php } ?>
 				</table>
+				
 			</td>
 		</tr>
 	</table>
+
+	<script type="text/javascript">
+		function ajax(){
+	let CuName = document.getElementById('CuName').value;
+	let SeName = document.getElementById('SeName').value;
+	let Item = document.getElementById('Item').value;
+	let Quantity = document.getElementById('Quantity').value;
+
+	let xhttp = new XMLHttpRequest();
+	xhttp.open('POST', '../Controller/order.php', false);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send('CuName='+CuName);
+	xhttp.send('SeName='+SeName);
+	xhttp.send('Item='+Item);
+	xhttp.send('Quantity='+Quantity);
+	
+}
+	</script>
 
 </body>
 </html>

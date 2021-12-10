@@ -1,6 +1,9 @@
 <?php
 
 	include_once('../Controller/Header.php');
+	require_once('../Model/orderManageModel.php');
+	$result = manageOrder();
+	$count = mysqli_num_rows($result);
 ?>
 <html>
 <head>
@@ -45,153 +48,77 @@
 			</h3>
 			</td>
 			<td>
-				<table border="1" align="center" width="80%" height="300px">
-					<tr>
-						<td>
-							<h3 align="center">Order ID</h3>
-						</td>
-						<td>
-							<h3 align="center">Delivery Date</h3>
-						</td>
-						<td>
-							<h3 align="center">Deliver To</h3>
-						</td>
-						<td>
-							<h3 align="center">Customer Name</h3>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21353
-						</td>
-						<td>
-							31-10-2021
-						</td>
-						<td>
-							20/2 Kumarkhali,Rangpur
-						</td>
-						<td>
-							Abdul Latif
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21365
-						</td>
-						<td>
-							31-10-2021
-						</td>
-						<td>
-							34/8 Rampura, Dhaka
-						</td>
-						<td>
-							Kamrul Hasan
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21367
-						</td>
-						<td>
-							31-10-2021
-						</td>
-						<td>
-							34/8 Rampura, Dhaka
-						</td>
-						<td>
-							Kamrul Hasan
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21368
-						</td>
-						<td>
-							1-11-2021
-						</td>
-						<td>
-							2no. House, 37 no. Road, Hasanbag, Rajshahi
-						</td>
-						<td>
-							Jahangir Alam
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21371
-						</td>
-						<td>
-							3-11-2021
-						</td>
-						<td>
-							Kamarbari, Mongla, Khulna
-						</td>
-						<td>
-							Halimullah
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21441
-						</td>
-						<td>
-							6-11-2021
-						</td>
-						<td>
-							Uttarkandi, Jhalokathi, Barisal
-						</td>
-						<td>
-							Chan Mia
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21462
-						</td>
-						<td>
-							7-11-2021
-						</td>
-						<td>
-							New Kakrail Road, Dhaka
-						</td>
-						<td>
-							Jahan Muhammah
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21488
-						</td>
-						<td>
-							7-11-2021
-						</td>
-						<td>
-							34/8 Rampura, Dhaka
-						</td>
-						<td>
-							Kamrul hasan
-						</td>
-					</tr>
-					<tr>
-						<td>
-							AG21521
-						</td>
-						<td>
-							8-11-2021
-						</td>
-						<td>
-							North Asad Gate, Mohammadpur, Dhaka
-						</td>
-						<td>
-							Taranath Kumar
-						</td>
-					</tr>
+				<h3>Enter Orders Details:</h3>
+				<script type="text/javascript">
+					function validate()
+					{
+ 						let oID = document.getElementById( "oID" );
+ 						let dDate = document.getElementById("dDate");
+ 						let Address = document.getElementById("Address");
+ 						
+ 						if( oID.value == "" || dDate.value=="" || Address.value=="" || )
+ 						{
+  						alert("Please fill the empty field");
+  						return false;
+						 }
+						 else{
+						 	return true;
+						 }
 
+					}
+				</script>
+				<form method="post" onsubmit="return validate();" action="../Controller/mOrder.php">
+					Order ID:
+					<input type="text" id="oID" name="oID" placeholder="Type OrderID" >
+					Delivery Date:
+					<input type="text" id="dDate" name="dDate" placeholder="Type Delivery Date">
+					Deliver to:
+					<input type="text" id="Address" name="Address" placeholder="Type Address">
+					
+					<input type="submit" name="submit" value="Add">
 
+				</form>
+				<table border="1" align="center">
+						<tr>
+							<th>ORDER ID</th>
+							<th>DElIVERY DATE</th>
+							<th>ADRESS</th>
+							<th>ACTION</th>
+						</tr>
+				<?php while($data = mysqli_fetch_assoc($result)){?>
+						<tr>
+							<td><?=$data['id']?></td>
+							<td><?=$data['dDate']?></td>
+							<td><?=$data['address']?></td>
+							<td>
+								<a href="../Controller/editOrder.php?id=<?=$data['id']?>">Edit</a>
+								<a href="../Controller/deleteOrder.php?id=<?=$data['id']?>">Delete</a>
+							</td>
+						</tr>
+				<?php } ?>
 				</table>
 			</td>
 		</tr>
 	</table>
+
+	<script type="text/javascript">
+		function ajax(){
+	let oID = document.getElementById('oID').value;
+	let dDate = document.getElementById('dDate').value;
+	let Address = document.getElementById('Address').value;
+	
+	
+
+	let xhttp = new XMLHttpRequest();
+	xhttp.open('POST', '../Controller/mOrder.php', false);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send('oID='+oID);
+	xhttp.send('dDate='+dDate);
+	xhttp.send('Address='+Address);
+	
+	
+}
+	</script>
 
 </body>
 </html>
